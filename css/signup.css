@@ -1,0 +1,169 @@
+ 
+
+.register-cont {
+    margin: 0 auto;
+    margin-top: 90px;
+    width: 600px;
+    margin-bottom: 30px;
+    font-family: Calibri;
+    border: 1px rgb(206, 206, 206) solid;
+}
+
+.register-cont h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.register-cont h4 {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 17px;
+}
+
+.text-block label{
+    display: block;
+
+}
+
+.text-block {
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+
+}
+
+.text-block .txt-box {
+    width: 100%;
+    padding: 10px;
+    border: 1px rgb(204, 204, 204) solid;
+    outline: none;
+    transition: 0.3s ease;
+    border-radius: 3px;
+}
+
+.text-block label {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: rgb(41, 41, 41);
+}
+
+.text-block .txt-box:focus {
+    width: 100%;
+    padding: 10px;
+    border: 1px #70d10e solid;
+    box-shadow: -3px 2px 15px -8px rgba(112,209,14,0.75) inset;
+-webkit-box-shadow: -3px 2px 15px -8px rgba(112,209,14,0.75) inset;
+-moz-box-shadow: -3px 2px 15px -8px rgba(112,209,14,0.75) inset;
+}
+
+.line-sign {
+    height: 1px;
+    width: 430px;
+    background: rgb(197, 197, 197);
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+}
+.personal-cont {
+    margin-bottom: 30px;
+}
+.register-cont .container {
+    display: block;
+    position: relative;
+    margin-left: 20px;
+    padding-left: 27px;
+    padding-top: 3px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: bold;
+  }
+  
+  /* Hide the browser's default checkbox */
+
+.register-cont  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .register-cont  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(197, 197, 197);
+    transition: 0.3s ease;
+  }
+
+  .register-cont .container:hover input ~ .checkmark {
+    background-color: rgb(150, 150, 150);
+  }
+  
+
+  .register-cont  .container input:checked ~ .checkmark {
+    background-color: #7deb11;
+  }
+
+  .register-cont .container input:checked ~ .checkmark {
+    background-color: #7deb11;
+  }
+  
+
+  .register-cont .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+
+  .register-cont .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .register-cont  .container .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+
+  .agreement-cont {
+      width: 330px;
+      margin: 20px auto;
+
+  }
+
+  .green {
+      color: #70d10e;
+  }
+
+  .sign-button {
+      display: block;
+      margin: 30px auto;
+      font-weight: bold;
+      padding: 10px 25px;
+      margin-bottom: 50px;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      font-size: 17px;
+      color: white;
+      background: #70d10e;
+      border-radius: 3px;
+
+  }

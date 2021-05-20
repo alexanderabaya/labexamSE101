@@ -1,0 +1,220 @@
+.shop-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+
+
+}
+
+.filter-list-cont {
+    width: 20%;
+    min-height: 485px;
+    border-right:1px rgb(206, 206, 206) solid;
+    font-family: lato;
+    box-shadow: -2px 2px 12px 0px rgba(0,0,0,0.42);
+-webkit-box-shadow: -2px 2px 12px 0px rgba(0,0,0,0.42);
+-moz-box-shadow: -2px 2px 12px 0px rgba(0,0,0,0.42);
+}
+.item-list-cont {
+    width: 80%;
+    min-height: 485px;
+}
+
+.fa-filter {
+    color: rgb(77, 77, 77);
+}
+
+.filter-list-cont h3 {
+    text-align: center;
+    font-size: 17px;
+    color: rgb(41, 41, 41);
+    letter-spacing: 1px;
+}
+
+
+  .filter-block h2 {
+    font-size: 14px;
+    color: rgb(63, 63, 63);
+    margin-bottom: 20px;
+  }
+
+  .filter-line {
+      height: 1px;
+      width: 190px;
+      background: rgb(218, 218, 218);
+      margin: 30px auto;
+  }
+
+  .filter-block {
+    width: 220px;
+    margin: 0 auto;
+
+  }
+
+.filter-block .container {
+    display: block;
+    position: relative;
+    margin-left: 20px;
+    padding-left: 27px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+
+.filter-block  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+
+.filter-block  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(197, 197, 197);
+    transition: 0.3s ease;
+  }
+
+.filter-block .container:hover input ~ .checkmark {
+    background-color: rgb(150, 150, 150);
+  }
+  
+
+.filter-block  .container input:checked ~ .checkmark {
+    background-color: #7deb11;
+  }
+
+.filter-block .container input:checked ~ .checkmark {
+    background-color: #7deb11;
+  }
+  
+
+.filter-block .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+
+.filter-block .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+.filter-block .container .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+.stars {
+    color: #fdcc0d;
+}
+
+.itemlist {
+    width: 950px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.item-container {
+    height: 300px;
+    width: 200px;
+    border: 1px rgb(218, 218, 218) solid;
+    box-shadow: 2px 10px 13px -9px rgba(0,0,0,0.33);
+    -webkit-box-shadow: 2px 10px 13px -9px rgba(0,0,0,0.33);
+    -moz-box-shadow: 2px 10px 13px -9px rgba(0,0,0,0.33);
+    border: 1px rgb(223, 223, 223) solid;
+    transition: 0.3s ease;
+    padding-top:1px ;
+
+}
+
+.item-link {
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px 10px;
+}
+
+.item-container:hover {
+    border: 1px #7deb11 solid;
+}
+
+.item-container img {
+    height: 165px;
+    width: 200px;
+}
+
+.item-name-cont {
+    font-family: lato;
+    font-size: 13px;
+    padding:5px 10px;
+    height: 35px;
+    color: rgb(34, 34, 34);
+}
+
+.item-name span {
+    display: block;
+    width: 180px;
+
+}
+
+.item-price {
+    padding-left: 10px;
+    font-family: calibri;
+    font-size: 20px;
+    font-weight: bold;
+    color:#70d10e;
+}
+
+.item-rate-cont {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+
+.item-rate-cont .item-favorite-cont{
+    color: rgb(97, 97, 97);
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.item-favorite-cont:hover {
+    color: rgb(255, 98, 125);
+}
+
+.item-rate {
+    color: #fdcc0d;
+    font-size: 12px;
+}
+
+
+
+.sold-cont {
+    color:rgb(97, 97, 97) ;
+    padding: 0 10px;
+    float: right;
+    font-family: lato;
+    font-size: 12px;
+
+}

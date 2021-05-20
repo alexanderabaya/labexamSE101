@@ -1,0 +1,118 @@
+
+  
+  
+  .slider-container {
+    margin-top: 60px;
+    height: 330px;
+    justify-content: center;
+    align-items: center;
+    background: #7deb11;
+  
+  }
+  
+  .slider-container  .slider{
+    width: 100%;
+    height: 330px;
+    overflow: hidden;
+  }
+  
+  
+  
+  .slider-container  .slides{
+    width: 500%;
+    height: 330px;
+    display: flex;
+  }
+  
+  .slider-container  .slides input{
+    display: none;
+  }
+  
+  .slider-container  .slide{
+    width: 20%;
+    transition: 2s;
+  }
+  
+  .slider-container  .slide img{
+    width: 100%;
+    height: 330px;
+  }
+  
+  /*css for manual slide navigation*/
+  
+  .slider-container  .navigation-manual{
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .slider-container  .manual-btn{
+    border: 2px solid #7deb11;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  
+  .slider-container  .manual-btn:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  .slider-container  .manual-btn:hover{
+    background: #7deb11;
+  }
+  
+  .slider-container  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+  
+  .slider-container  #radio2:checked ~ .first{
+    margin-left: -20%;
+  }
+  
+  .slider-container  #radio3:checked ~ .first{
+    margin-left: -40%;
+  }
+  
+  .slider-container  #radio4:checked ~ .first{
+    margin-left: -60%;
+  }
+  
+  /*css for automatic navigation*/
+  
+  .slider-container  .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 290px;
+  }
+  
+  .slider-container  .navigation-auto div{
+    border: 2px solid #7deb11;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+  }
+  
+  .slider-container  .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  .slider-container  #radio1:checked ~ .navigation-auto .auto-btn1{
+    background: #7deb11;
+  }
+  
+  .slider-container  #radio2:checked ~ .navigation-auto .auto-btn2{
+    background: #7deb11;
+  }
+  
+  .slider-container  #radio3:checked ~ .navigation-auto .auto-btn3{
+    background: #7deb11;
+  }
+  
+  .slider-container  #radio4:checked ~ .navigation-auto .auto-btn4{
+    background: #7deb11;
+  }

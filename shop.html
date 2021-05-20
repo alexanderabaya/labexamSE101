@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html>
+    <title>Shop</title>
+
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="icons/css/all.css  ">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <script src="js/jquery-3.5.1.min.js"></script>
+
+<body>
+    <div class="nav-cont">
+        <div class="nav-block">
+            <span class="menu-button"><i class="fas fa-bars mn-icon"onclick="show()"></i></span>
+            <img src="img/logo-name.png" alt="" class="logo-name">
+            <div class="nav-cont-others">
+                <div class="search-cont">
+                    <form action="">
+                        <input type="text" class="search-box" placeholder="Search">
+                    <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="heart-cont">
+                    <span class="heart-btn"><i class="far fa-heart"></i></span>
+                    <div class="notif-box"><span>0</span></div>
+                </div>
+                <div class="cart-cont">
+                    <span class="cart-btn"><i class="fas fa-shopping-cart"></i></span>
+                    <div class="notif-box"><span>0</span></div>
+                </div>
+
+
+                <span class="login-btn" onclick="loginbtn()">LOGIN/REGISTER</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="login-cont" id="loginbut">
+        <h3>Login your account</h3>
+        <form action="">
+            <div class="login-block" id>
+                <label for=""><i class="far fa-user"></i></label>
+                <input type="text" name="" id="" placeholder="Username or Email" class="txt-box">
+            </div>
+    
+            <div class="login-block">
+                <label for=""><i class="fas fa-lock"></i></label>
+                <input type="password" name="" id="pass1" placeholder="Password" class="txt-box" onkeyup="trigger()">
+                <span class="eye-btn" id="showBtn"><i id="icon" class="fas fa-eye fa-lg"></i></span>
+
+                <button type="submit" class="login-btn-sub">LOGIN</button>
+            </div>
+            <a href="">Forgot Password?</a><br>
+            <span>You dont have an account?<a href=""> Register Now!</a></span>
+        </form>
+    </div>
+
+    <script>
+        const showBtn = document.querySelector(".eye-btn");
+        const input = document.getElementById("pass1");
+        var icon = document.getElementById("icon");
+        function trigger(){
+            if(input.value != ""){
+    
+              showBtn.style.display = "block";
+              showBtn.onclick = function(){
+                if(input.type == "password"){
+                  input.type = "text";
+                  icon.classList.remove("fa-eye");
+                  icon.classList.add("fa-eye-slash");
+                  showBtn.style.color = "white";
+                }else{
+                  input.type = "password";
+                  icon.classList.remove("fa-eye-slash");
+                  icon.classList.add("fa-eye");
+                  showBtn.style.color = "white";
+                }
+              }
+            }else{
+              showBtn.style.display = "none";
+            }
+          }
+
+        function loginbtn() {
+            document.getElementById('loginbut').classList.toggle('active')
+        }
+        
+    </script>
+
+    <!-- navigation menu-->
+        <div class="inner-menu-cont" id="showmenu">
+            <span class="close-menu" ><i class="fas fa-times" onclick="Close()"></i></span>
+            <div class="menu-logo">
+                <img src="img/logo.png" alt="" class="menulogo">
+                <img src="img/name.png" alt="" class="menuname">
+            </div>
+            <br>
+            <a href=""><li style='border-top: 0.5px rgba(126, 126, 126, 0.39) solid;'><i class="fa fa-home" ></i>  Home</li></a>
+            <a href=""><li><i class="fas fa-store"></i>  Shop</li></a>
+            <a href=""><li><i class="far fa-check-square"></i>  Terms of Use</li></a>
+            <a href=""><li><i class="fas fa-shield-alt" ></i>  Privacy Policy</li></a>
+
+
+        </div>
+
+        <div class="menu-bar-cont" id="dimblack">
+            
+        </div>
+
+     <!-- content-->   
+    <div class="content-container">
+        <div class="main-content-cont">
+            <div class="shop-container">
+                <div class="filter-list-cont">
+                    <h3><i class="fas fa-filter"></i> SEARCH FILTER</h3>
+
+                    <div class="filter-block">
+                        <h2>By Category</h2>
+                            
+                            <div class="check-boxes">
+                                <label class="container">Monitor
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+    
+                                <label class="container">Case
+                                    <input type="checkbox" >
+                                    <span class="checkmark"></span>
+                                </label>
+    
+                                <label class="container">Motherboad
+                                    <input type="checkbox" >
+                                    <span class="checkmark"></span>
+                                </label>
+    
+                                <label class="container">Power Supply
+                                    <input type="checkbox" >
+                                    <span class="checkmark"></span>
+                                </label>
+    
+                                <label class="container">CPU
+                                    <input type="checkbox" >
+                                    <span class="checkmark"></span>
+                                </label>
+    
+                                <label class="container">GPU
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <label class="container">RAM
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <label class="container">Drive
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+
+
+                                <label class="container">Fan
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <label class="container">Mouse
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <label class="container">Keyboard
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <label class="container">Headset
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+
+                            <div class="filter-line"></div>
+
+                            
+                    </div>
+
+                    <div class="filter-block">
+                        <h2>Sort By</h2>
+                            
+                            <div class="check-boxes">
+                                <label class="container">Top Sales
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+    
+                                <label class="container">Latest 
+                                    <input type="checkbox" >
+                                    <span class="checkmark"></span>
+                                </label>
+    
+                                <label class="container">Most Reviewed
+                                    <input type="checkbox" >
+                                    <span class="checkmark"></span>
+                                </label>
+    
+                                <label class="container">Lowest Price
+                                    <input type="checkbox" >
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <label class="container">Highest Price
+                                    <input type="checkbox" >
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+
+                            <div class="filter-line"></div>
+
+                            
+                    </div>
+
+                    <div class="filter-block">
+                        <h2>Ratings</h2>
+                            
+                            <div class="check-boxes">
+                                <label class="container">
+                                    <i class="fas fa-star stars"></i>
+                                    <i class="fas fa-star stars"></i>
+                                    <i class="fas fa-star stars"></i>
+                                    <i class="fas fa-star stars"></i>
+                                    <i class="fas fa-star stars"></i>
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+    
+                                <label class="container">
+                                    <i class="fas fa-star stars"></i>
+                                    <i class="fas fa-star stars"></i>
+                                    <i class="fas fa-star stars"></i>
+                                    <i class="fas fa-star stars"></i>
+                                    <input type="checkbox" >
+                                    <span class="checkmark"></span>
+                                </label>
+    
+                                <label class="container">
+                                    <i class="fas fa-star stars"></i>
+                                    <i class="fas fa-star stars"></i>
+                                    <i class="fas fa-star stars"></i>
+                                    <input type="checkbox" >
+                                    <span class="checkmark"></span>
+                                </label>
+    
+                                <label class="container">
+                                    <i class="fas fa-star stars"></i>
+                                    <i class="fas fa-star stars"></i>
+                                    <input type="checkbox" >
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <label class="container">
+                                    <i class="fas fa-star stars"></i>
+                                    <input type="checkbox" >
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+
+                            <div class="filter-line"></div>
+
+                            
+                    </div>
+                </div>
+                <div class="item-list-cont">
+                    <div class="itemlist">
+                        <!--item - start-->
+                        <a href="" class="item-link">
+                            <div class="item-container">
+                                <img src="img/products/motherboard.jpg" alt="">
+                                <div class="item-name-cont">
+                                    <span class="item-name">MSI GAMING PLUS AMD X570 AM4 Motherboard</span>
+                                    <span></span>
+                                </div>
+                                <div class="item-price">
+                                    &#8369;  <span>10,750</span>
+                                </div>
+                                <div class="item-rate-cont">
+                                    <div class="item-favorite-cont">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                    
+                                    <div class="item-rate">
+                                        <div class="stars-cont">
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sold-cont">
+                                    Sold(261)
+                                </div>
+                            </div>
+                        </a>
+                        <!--item - end-->
+                    
+                        <!--item - start-->
+                        <a href="" class="item-link">
+                            <div class="item-container">
+                                <img src="img/products/graphicscard.jpg" alt="">
+                                <div class="item-name-cont">
+                                    <span class="item-name">Nvidia RTX 3060 DDR5 4GB</span>
+                                    <span></span>
+                                </div>
+                                <div class="item-price">
+                                    &#8369;  <span>47,550</span>
+                                </div>
+                                <div class="item-rate-cont">
+                                    <div class="item-favorite-cont">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                    
+                                    <div class="item-rate">
+                                        <div class="stars-cont">
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sold-cont">
+                                    Sold(101)
+                                </div>
+                            </div>
+                        </a>
+                        <!--item - end-->
+
+                        <!--item - start-->
+                        <a href="" class="item-link">
+                            <div class="item-container">
+                                <img src="img/products/monitor.jpg" alt="">
+                                <div class="item-name-cont">
+                                    <span class="item-name">HKC M27G1 Gaming Monitor 27 inch</span>
+                                    <span></span>
+                                </div>
+                                <div class="item-price">
+                                    &#8369;  <span>13,998.00</span>
+                                </div>
+                                <div class="item-rate-cont">
+                                    <div class="item-favorite-cont">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                    
+                                    <div class="item-rate">
+                                        <div class="stars-cont">
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sold-cont">
+                                    Sold(131)
+                                </div>
+                            </div>
+                        </a>
+                        <!--item - end-->
+
+                        <!--item - start-->
+                        <a href="" class="item-link">
+                            <div class="item-container">
+                                <img src="img/products/case.jpg" alt="">
+                                <div class="item-name-cont">
+                                    <span class="item-name">Metallic Gear by Phanteks NEO Qube White</span>
+                                    <span></span>
+                                </div>
+                                <div class="item-price">
+                                    &#8369;  <span>4,799</span>
+                                </div>
+                                <div class="item-rate-cont">
+                                    <div class="item-favorite-cont">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                    
+                                    <div class="item-rate">
+                                        <div class="stars-cont">
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sold-cont">
+                                    Sold(53)
+                                </div>
+                            </div>
+                        </a>
+                        <!--item - end-->
+
+                        <!--item - start-->
+                        <a href="" class="item-link">
+                            <div class="item-container">
+                                <img src="img/products/cpu.jpg" alt="">
+                                <div class="item-name-cont">
+                                    <span class="item-name">Ryzen 9 3900X 3.8 GHz (Matisse) Socket AM4 </span>
+                                    <span></span>
+                                </div>
+                                <div class="item-price">
+                                    &#8369;  <span>27,900</span>
+                                </div>
+                                <div class="item-rate-cont">
+                                    <div class="item-favorite-cont">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                    
+                                    <div class="item-rate">
+                                        <div class="stars-cont">
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sold-cont">
+                                    Sold(60)
+                                </div>
+                            </div>
+                        </a>
+                        <!--item - end-->
+
+                        <!--item - start-->
+                        <a href="" class="item-link">
+                            <div class="item-container">
+                                <img src="img/products/drive.jpg" alt="">
+                                <div class="item-name-cont">
+                                    <span class="item-name">Samsung 980 PRO NVMe M.2 SSD 250GB</span>
+                                    <span></span>
+                                </div>
+                                <div class="item-price">
+                                    &#8369;  <span>4,499</span>
+                                </div>
+                                <div class="item-rate-cont">
+                                    <div class="item-favorite-cont">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                    
+                                    <div class="item-rate">
+                                        <div class="stars-cont">
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sold-cont">
+                                    Sold(311)
+                                </div>
+                            </div>
+                        </a>
+                        <!--item - end-->
+
+                        <!--item - start-->
+                        <a href="" class="item-link">
+                            <div class="item-container">
+                                <img src="img/products/keyboard.jpg" alt="">
+                                <div class="item-name-cont">
+                                    <span class="item-name">Steel Series APEX PRO Keyboard</span>
+                                    <span></span>
+                                </div>
+                                <div class="item-price">
+                                    &#8369;  <span>10,999</span>
+                                </div>
+                                <div class="item-rate-cont">
+                                    <div class="item-favorite-cont">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                    
+                                    <div class="item-rate">
+                                        <div class="stars-cont">
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sold-cont">
+                                    Sold(401)
+                                </div>
+                            </div>
+                        </a>
+                        <!--item - end-->
+                    
+                        <!--item - start-->
+                        <a href="" class="item-link">
+                            <div class="item-container">
+                                <img src="img/products/mouse.jpg" alt="">
+                                <div class="item-name-cont">
+                                    <span class="item-name">Logitech G502 Hero Gaming Mouse</span>
+                                    <span></span>
+                                </div>
+                                <div class="item-price">
+                                    &#8369;  <span>3,999</span>
+                                </div>
+                                <div class="item-rate-cont">
+                                    <div class="item-favorite-cont">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                    
+                                    <div class="item-rate">
+                                        <div class="stars-cont">
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sold-cont">
+                                    Sold(312)
+                                </div>
+                            </div>
+                        </a>
+                        <!--item - end-->
+
+                        <!--item - start-->
+                        <a href="" class="item-link">
+                            <div class="item-container">
+                                <img src="img/products/ram.jpg" alt="">
+                                <div class="item-name-cont">
+                                    <span class="item-name">GSKILL TRIDENT Z RGB 16GB DUAL DDR4 3200MHZ </span>
+                                    <span></span>
+                                </div>
+                                <div class="item-price">
+                                    &#8369;  <span>6,200</span>
+                                </div>
+                                <div class="item-rate-cont">
+                                    <div class="item-favorite-cont">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                    
+                                    <div class="item-rate">
+                                        <div class="stars-cont">
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sold-cont">
+                                    Sold(518)
+                                </div>
+                            </div>
+                        </a>
+                        <!--item - end-->
+
+                        <!--item - start-->
+                        <a href="" class="item-link">
+                            <div class="item-container">
+                                <img src="img/products/headset.jpg" alt="">
+                                <div class="item-name-cont">
+                                    <span class="item-name">STEELSERIES ARCTIS PRO WIRELESS HEADSET</span>
+                                    <span></span>
+                                </div>
+                                <div class="item-price">
+                                    &#8369;  <span>11,099</span>
+                                </div>
+                                <div class="item-rate-cont">
+                                    <div class="item-favorite-cont">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                    
+                                    <div class="item-rate">
+                                        <div class="stars-cont">
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sold-cont">
+                                    Sold(354)
+                                </div>
+                            </div>
+                        </a>
+                        <!--item - end-->
+
+                        <!--item - start-->
+                        <a href="" class="item-link">
+                            <div class="item-container">
+                                <img src="img/products/powersupply.jpg" alt="">
+                                <div class="item-name-cont">
+                                    <span class="item-name">ARESGAME Power Supply 500W 80+</span>
+                                    <span></span>
+                                </div>
+                                <div class="item-price">
+                                    &#8369;  <span>5,500</span>
+                                </div>
+                                <div class="item-rate-cont">
+                                    <div class="item-favorite-cont">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                    
+                                    <div class="item-rate">
+                                        <div class="stars-cont">
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sold-cont">
+                                    Sold(154)
+                                </div>
+                            </div>
+                        </a>
+                        <!--item - end-->
+
+                        <!--item - start-->
+                        <a href="" class="item-link">
+                            <div class="item-container">
+                                <img src="img/products/fan.jpg" alt="">
+                                <div class="item-name-cont">
+                                    <span class="item-name">Pccooler 120mm Fan Moonlight Series, RGB LED </span>
+                                    <span></span>
+                                </div>
+                                <div class="item-price">
+                                    &#8369;  <span>1,599</span>
+                                </div>
+                                <div class="item-rate-cont">
+                                    <div class="item-favorite-cont">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                    
+                                    <div class="item-rate">
+                                        <div class="stars-cont">
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sold-cont">
+                                    Sold(789)
+                                </div>
+                            </div>
+                        </a>
+                        <!--item - end-->
+
+                        
+                    </div>
+                </div>
+            </div>
+                
+        
+
+        </div>
+            
+    </div>
+
+    <footer class="footer">
+        <div class="inner-footer-cont">
+            <div class="footer-block-about">
+                <img src="img/name_white.png" alt="">
+                <div class="about-content">
+                    <p>
+                        <b>PC Center </b>is an online shop where you can buy almost all you need
+                        in building your own personal computer. We offer a fully built PC so it is
+                        less hassle for you to build your own. This online shop accepts online payment
+                        and cash on delivery payments in order to deliver the items that you ordered.
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-block">
+                <h3>QUICK LINKS</h3>
+                <div class="line-footer"></div>
+                <ul>
+                    <a href=""><li>Home</li></a>
+                    <a href=""><li>Shop</li></a>
+                    <a href=""><li>FAQs</li></a>
+                    <a href=""><li>Developer</li></a>
+                    <a href=""><li>Privacy Policy</li></a>
+
+                </ul>
+            </div>
+
+            <div class="footer-block">
+                <h3>CONTACT US</h3>
+                <div class="line-footer"></div>
+                <ul>
+                    <a href=""><li><i class="fas fa-map-marker-alt icon-contacts"></i> Saguittaruis Building, <b>Makati City</b></li></a>
+                         
+                    <a href=""><li><i class="fas fa-phone icon-contacts"></i> (02) 816-3868/(02) 816-3847</li></a>
+                   
+                    <a href=""><li><i class="fas fa-envelope icon-contacts"></i><b>pccenter@gmail.com</b> </li></a>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="social-media">
+            <span class="follow-us">FOLLOW US:</span>
+            <ul>
+                <a href=""><li><i class="fab fa-facebook-f facebook"></i></li></a>
+                <a href=""><li><i class="fab fa-twitter twitter"></i></li></a>
+                <a href=""><li><i class="fab fa-instagram instagram"></i></li></a>
+            </ul>
+        </div>
+
+        <div class="copyright-cont">
+            Copyright &copy; <b><span class="copyright-green">PC CENTER</span></b> 2021.
+        </div>
+    </footer>
+
+
+
+</body>
+
+
+
+
+<script>
+    
+    var dimblack = document.getElementById('dimblack');
+    var sidebar  = document.getElementById('showmenu'); 
+
+function show() {
+
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+
+        window.onscroll = function() {
+            window.scrollTo(scrollLeft, scrollTop);
+        };
+
+    dimblack.style.display = "block";
+    sidebar.style.left = "0px";
+}
+
+function Close() {
+
+    window.onscroll = function() {};
+    dimblack.style.display = "none";
+    sidebar.style.left = "-260px";
+    
+
+
+}   
+</script>
+
+
+
+
+</html>

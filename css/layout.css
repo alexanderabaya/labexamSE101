@@ -1,0 +1,13 @@
+html,body {
+    height: 100%;
+    margin: 0;
+}
+
+.content-container {
+    min-height: 100%;
+}
+
+.main-content-cont {
+    overflow: auto;
+    padding-bottom: 370px;
+}

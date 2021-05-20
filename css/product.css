@@ -1,0 +1,409 @@
+.product-cont {
+    width: 1150px;
+    min-height: 500px;
+    border: 1px rgb(204, 204, 204) solid;
+    margin:0 auto;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    
+
+}
+
+.product-content {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    height: 400px;
+}
+
+.item-image-cont {
+    height: 300px;
+    width: 484px;
+    margin-right: 30px;
+    
+}
+
+.item-image-cont img {
+    height: 400px;
+}
+
+.item-des-cont {
+    height: 300px;
+    width: 590px;
+
+}
+
+.item-name {
+    font-family: lato;
+    font-size: 25px;
+    color: rgb(24, 24, 24);
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.review-section {
+    display: flex;
+    flex-direction: row;
+    font-family: lato;
+}
+
+.rate-stars {
+    width: 180px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+.rate-stars i {
+    font-size: 14px;
+    color: #fdcc0d;
+    
+}
+
+
+.rating-count {
+    width: 130px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 14px;
+    border-left: 1px rgb(160, 160, 160) solid;
+    border-right: 1px rgb(160, 160, 160) solid;
+    color:rgb(112, 110, 110) ;
+}
+
+.sell-count {
+    width: 130px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 14px;
+    color:rgb(112, 110, 110) ;
+    border-right: 1px rgb(160, 160, 160) solid;
+}
+
+
+.item-price {
+    color: #70d10e;
+    font-size: 30px;
+    font-family: lato ;
+    font-weight: bold;
+    padding: 15px 20px;
+}
+
+.payment-section {
+    padding-left: 20px;
+    font-family: lato;
+    font-size: 13px;
+}
+
+.e-money {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.e-money .title {
+    padding: 4px 7px;
+    width: 110px;
+
+}
+
+.cod {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.cod .title {
+    padding: 4px 7px;
+    width: 110px;
+}
+
+.e-money .available {
+    padding: 4px 7px;
+    border: 1px #70d10e solid;
+    color: #70d10e;
+
+} 
+
+.cod .available {
+    padding: 4px 7px;
+    border: 1px #70d10e solid;
+    color: #70d10e;
+
+}
+
+.quantity-cont {
+    display: flex;
+    padding-left: 20px;
+    margin: 20px 0; 
+}
+
+.quantity-cont span{
+    font-family: lato;
+    padding: 4px 0;
+    color: rgb(31, 30, 30);
+}
+
+.quantity-input {
+    margin: 0 20px;
+}
+
+.quantity-cont .txtbox {
+    width: 30px;
+    height: 25px;
+    text-align: center;
+    border: none;
+    border-top: 1px #70d10e solid;
+    border-bottom: 1px #70d10e solid;
+    padding: 1.5px;
+}
+
+
+
+.quantity-cont .quantity-button {
+    outline: none;
+    background: white;
+    border: 1px #70d10e solid;
+    font-weight: bold;
+    cursor: pointer;
+    color: #70d10e;
+    
+}
+
+.plus-btn {
+    padding: 6px 10px;
+    transform: translateX(4px);
+}
+
+.minus-btn {
+    padding: 6px 10px;
+    transform: translateX(-4px);
+}
+
+.item-favorite-cont{
+    width:130px ;
+    color: rgb(97, 97, 97);
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 15px;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.item-favorite-cont:hover {
+    color: rgb(255, 98, 125);
+}
+
+.fa-heart {
+    padding-left: 5px;
+    font-size: 17px;
+}
+
+.add-cart {
+    display: block;
+    font-size: 17px;
+    font-family: calibri;
+    font-weight: bold;
+    width: 180px;
+    margin: 0 auto;
+    padding: 15px 0;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: none;
+    background: #70d10e;
+    transition: 0.3s;
+    color: white;
+    margin-top: 30px;
+}
+
+.add-cart:hover {
+    background:#1e1f21 ;
+    color: white;
+
+}
+
+/**tABS**/
+
+.tab-container {
+    margin: 0 auto;
+    margin-top: 5px;
+    width: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 400px;
+    font-family: calibri;
+  }
+  
+  .inner-container {
+    margin: 0 20px;
+  }
+  
+  
+  
+  .tab-categories-txt {
+    text-align: center;
+    color: black;
+    font-size: 25px;
+    margin: 20px 0 ;
+  }
+  
+  .tab-button-container {
+    background: white;
+    flex-shrink: 0;
+    margin-top: 20px;
+  }
+  
+  .tab-button-first {
+    border-top:1px rgba(151, 151, 151, 0.479) solid;
+  }
+  
+  .tab-button {
+    border: none;
+    cursor: pointer;
+    padding: 0 12px;
+    padding-bottom: 6px;
+    color: rgb(148, 148, 148);
+    font-weight: bold;
+    font-size: 13px;
+    background: white;
+    letter-spacing: 1px ;
+  }
+  
+  
+  
+  
+  
+  
+  
+  .tab-button-active {
+    color: black;
+    border-bottom: 3px black solid;
+  }
+  
+  .tab-content-container {
+  background: white;
+  width: 80%;
+  }
+  
+  .tab-content {
+  width: 95%;
+  margin: 0 auto;
+  display: none;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  }
+  
+  
+  
+  @keyframes fadeInOpacity {
+    0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  }
+
+/**Details tab**/
+.inner-tab-content {
+    margin-top: 20px;
+  }
+
+
+.details-content{
+      margin-bottom: 10px;
+      display: flex;
+  }
+
+.details-content a {
+      color: black;
+  }
+  
+.label{
+    font-weight: bold;
+    width: 140px;
+}
+
+.info{
+    width: 500px;
+}
+.tab-content-active {
+    display: block;
+  }
+
+/**Review Tab**/
+
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 500px;
+  min-height: 130px;
+  padding: 10px;
+  border: 0.5px rgba(148, 148, 148, 0.726) solid;
+  margin-bottom: 20px;
+}
+
+.details-user {
+  margin-bottom: 6px;
+}
+
+.details-user span {
+  display:block;
+  margin-bottom: 2px;
+}
+.user-c-details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.user-profile {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-c-details .star {
+  color:#fdcc0d ;
+}
+
+.user-name {
+  font-weight: bold;
+}
+
+.user-rate {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.user-c-date {
+  font-weight: bold;
+  font-size: 13px;
+  color: #1e1f21;
+}
+
+
+.user-comment {
+  padding: 5px;
+  padding-top: 4px;
+  border-top: 0.5px rgba(148, 148, 148, 0.726) solid ;
+}
+
+.profile-pic {
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  color: black;
+  border: 1px rgba(126, 126, 126, 0.699) solid;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.profile-pic img {
+  height: 30px;
+  width: 30px;
+}
